@@ -189,7 +189,7 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.3</version>
 				<configuration>
-					<warName>petclinic</warName>
+					<warName>hospitalbooklet-web</warName>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -249,7 +249,7 @@
 				<configuration>
 					<server>tomcat-development-server</server>
 					<port>8080</port>
-					<path>/petclinic</path>
+					<path>/hospitalbooklet-web</path>
 				</configuration>
 			</plugin>
 		</plugins>

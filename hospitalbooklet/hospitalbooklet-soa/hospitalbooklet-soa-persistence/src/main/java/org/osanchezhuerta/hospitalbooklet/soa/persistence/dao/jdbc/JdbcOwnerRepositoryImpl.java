@@ -42,12 +42,6 @@ import org.springframework.stereotype.Repository;
 /**
  * A simple JDBC-based implementation of the {@link OwnerRepository} interface.
  *
- * @author Ken Krebs
- * @author Juergen Hoeller
- * @author Rob Harrop
- * @author Sam Brannen
- * @author Thomas Risberg
- * @author Mark Fisher
  */
 @Repository
 public class JdbcOwnerRepositoryImpl implements OwnerRepository {

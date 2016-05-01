@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   <display-name>hospitalbooklet-web-1.0</display-name>
-    <description>Spring PetClinic + Thymeleaf sample application</description>
+    <description>hospitalbooklet-web-1.0</description>
 
     <context-param>
         <param-name>spring.profiles.active</param-name>
@@ -30,7 +30,7 @@
 - Servlet that dispatches request to registered handlers (Controller implementations).
 -->
     <servlet>
-        <servlet-name>petclinic</servlet-name>
+        <servlet-name>hospitalbooklet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
@@ -40,7 +40,7 @@
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>petclinic</servlet-name>
+        <servlet-name>hospitalbooklet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
@@ -54,6 +54,6 @@
 
     <filter-mapping>
         <filter-name>httpMethodFilter</filter-name>
-        <servlet-name>petclinic</servlet-name>
+        <servlet-name>hospitalbooklet</servlet-name>
     </filter-mapping>
 </web-app>

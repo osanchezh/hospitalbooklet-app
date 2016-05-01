@@ -29,11 +29,6 @@ import org.springframework.stereotype.Repository;
 /**
  * JPA implementation of the {@link VetRepository} interface.
  *
- * @author Mike Keith
- * @author Rod Johnson
- * @author Sam Brannen
- * @author Michael Isvy
- * @since 22.4.2006
  */
 @Repository
 public class JpaVetRepositoryImpl implements VetRepository {

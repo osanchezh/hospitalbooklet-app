@@ -37,13 +37,6 @@ import org.springframework.stereotype.Repository;
 /**
  * A simple JDBC-based implementation of the {@link VisitRepository} interface.
  *
- * @author Ken Krebs
- * @author Juergen Hoeller
- * @author Rob Harrop
- * @author Sam Brannen
- * @author Thomas Risberg
- * @author Mark Fisher
- * @author Michael Isvy
  */
 @Repository
 public class JdbcVisitRepositoryImpl implements VisitRepository {

@@ -28,8 +28,6 @@ import org.springframework.data.repository.Repository;
 /**
  * Spring Data JPA specialization of the {@link PetRepository} interface
  *
- * @author Michael Isvy
- * @since 15.1.2013
  */
 public interface SpringDataPetRepository extends PetRepository, Repository<Pet, Integer> {
 

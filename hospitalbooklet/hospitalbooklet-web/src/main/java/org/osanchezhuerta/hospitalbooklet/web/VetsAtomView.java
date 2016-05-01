@@ -33,8 +33,6 @@ import com.sun.syndication.feed.atom.Feed;
 /**
  * A view creating a Atom representation from a list of Visit objects.
  *
- * @author Alef Arendsen
- * @author Arjen Poutsma
  */
 public class VetsAtomView extends AbstractAtomFeedView {
 

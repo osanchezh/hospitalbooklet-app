@@ -21,8 +21,6 @@ import org.osanchezhuerta.hospitalbooklet.soa.model.Pet;
  * Subclass of Pet that carries temporary id properties which are only relevant for a JDBC implmentation of the
  * ClinicService.
  *
- * @author Juergen Hoeller
- * @see JdbcClinicImpl
  */
 class JdbcPet extends Pet {
 

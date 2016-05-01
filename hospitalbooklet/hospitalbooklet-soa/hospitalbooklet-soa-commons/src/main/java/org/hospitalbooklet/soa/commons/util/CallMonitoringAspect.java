@@ -27,12 +27,8 @@ import org.springframework.util.StopWatch;
  * Simple aspect that monitors call count and call invocation time. It uses JMX annotations and therefore can be
  * monitored using any JMX console such as the jConsole
  *
- * @author Rob Harrop
- * @author Juergen Hoeller
- * @author Michael Isvy
- * @since 2.5
  */
-@ManagedResource("petclinic:type=CallMonitor")
+@ManagedResource("hospitalbooklet:type=CallMonitor")
 @Aspect
 public class CallMonitoringAspect {
 

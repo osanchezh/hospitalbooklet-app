@@ -34,9 +34,6 @@ import org.springframework.format.Formatter;
  * <p/>
  * Also see how the bean 'conversionService' has been declared inside /WEB-INF/mvc-core-config.xml
  *
- * @author Mark Fisher
- * @author Juergen Hoeller
- * @author Michael Isvy
  */
 public class PetTypeFormatter implements Formatter<PetType> {
 

@@ -35,7 +35,7 @@
                       p:database="${jpa.database}" p:showSql="${jpa.showSql}"/>
             </property>
             <!-- gDickens: BOTH Persistence Unit and Packages to Scan are NOT compatible, persistenceUnit will win -->
-            <property name="persistenceUnitName" value="petclinic"/>
+            <property name="persistenceUnitName" value="hospitalbooklet"/>
             <property name="packagesToScan" value="org.osanchezhuerta.hospitalbooklet"/>
         </bean>
 

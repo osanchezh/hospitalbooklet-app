@@ -23,8 +23,6 @@ import org.springframework.data.repository.Repository;
 /**
  * Spring Data JPA specialization of the {@link VisitRepository} interface
  *
- * @author Michael Isvy
- * @since 15.1.2013
  */
 public interface SpringDataVisitRepository extends VisitRepository, Repository<Visit, Integer> {
 }

@@ -30,11 +30,6 @@ import org.springframework.stereotype.Repository;
  * <p/>
  * <p>The mappings are defined in "orm.xml" located in the META-INF directory.
  *
- * @author Mike Keith
- * @author Rod Johnson
- * @author Sam Brannen
- * @author Michael Isvy
- * @since 22.4.2006
  */
 @Repository
 public class JpaVisitRepositoryImpl implements VisitRepository {
