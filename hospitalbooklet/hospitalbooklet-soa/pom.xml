@@ -9,6 +9,7 @@
   <packaging>pom</packaging>
   <name>hospitalbooklet-soa</name>
   <description>hospitalbooklet-soa</description>
+
   <modules>
   	<module>hospitalbooklet-soa-commons</module>
   	<module>hospitalbooklet-soa-model</module>

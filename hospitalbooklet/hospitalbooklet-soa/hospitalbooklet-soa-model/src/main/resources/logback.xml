@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<property name="LOG_HOME" value="${loghome.location}" />
+	<property name="MODULE_NAME" value="hospitalbooklet-soa-model" />
+	<property name="PACKAGE_NAME" value="org.osanchezhuerta.hospitalbooklet" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
+
+		</layout>
+	</appender>
+	
+	<appender name="FILE-AUDIT"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/${MODULE_NAME}_debug.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+	
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
+
+	
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- rollover daily -->
+			<fileNamePattern>${LOG_HOME}/archived/${MODULE_NAME}_debug.%d{yyyy-MM-dd}.%i.log
+                        </fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+	</appender>
+
+	<appender name="FILE-ERROR"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/${MODULE_NAME}_error.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
+			</Pattern>
+		</encoder>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- rollover daily -->
+			<fileNamePattern>${LOG_HOME}/archived/${MODULE_NAME}_error.%d{yyyy-MM-dd}.%i.log
+                        </fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>4MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+	</appender>
+	
+<appender name="FILE-THREAD" class="ch.qos.logback.classic.sift.SiftingAppender">
+
+          <discriminator>
+		<key>logFileName</key>
+		<defaultValue>default-process</defaultValue>
+	  </discriminator>
+
+	  <sift>
+
+		<appender name="FILE-${logFileName}"
+			class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<file>${LOG_HOME}/${MODULE_NAME}_${logFileName}.log</file>
+
+			<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{80} - %msg%n</pattern>
+
+			</encoder>
+
+			<rollingPolicy
+				class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+				<FileNamePattern>${LOG_HOME}/${MODULE_NAME}_${logFileName}.%i.log.zip
+				</FileNamePattern>
+				<MinIndex>1</MinIndex>
+				<MaxIndex>10</MaxIndex>
+			</rollingPolicy>
+
+			<triggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+				<MaxFileSize>4MB</MaxFileSize>
+			</triggeringPolicy>
+
+		</appender>
+
+	  </sift>
+	</appender>
+	
+	<!-- Send logs to both console and file audit -->
+	<logger name="${PACKAGE_NAME}" level="debug"
+		additivity="false">
+		<appender-ref ref="FILE-AUDIT" />
+		<appender-ref ref="FILE-THREAD" />
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<root level="error">
+		<appender-ref ref="FILE-ERROR" />
+	</root>
+
+</configuration>
