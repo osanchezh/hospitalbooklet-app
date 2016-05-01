@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.osanchezhuerta.soa.persistence.dao.springdatajpa;
+package org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.springdatajpa;
 
 import java.util.Collection;
 
@@ -22,7 +22,7 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import org.osanchezhuerta.hospitalbooklet.soa.model.Owner;
-import org.osanchezhuerta.soa.persistence.dao.OwnerRepository;
+import org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.OwnerRepository;
 import org.springframework.stereotype.Repository;
 
 /**

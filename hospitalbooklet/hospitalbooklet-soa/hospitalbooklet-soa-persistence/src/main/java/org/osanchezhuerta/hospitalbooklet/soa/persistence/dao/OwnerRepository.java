@@ -28,7 +28,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.osanchezhuerta.soa.persistence.dao;
+package org.osanchezhuerta.hospitalbooklet.soa.persistence.dao;
 
 import java.util.Collection;
 

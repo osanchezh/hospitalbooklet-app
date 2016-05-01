@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.osanchezhuerta.soa.persistence.dao.jdbc;
+package org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

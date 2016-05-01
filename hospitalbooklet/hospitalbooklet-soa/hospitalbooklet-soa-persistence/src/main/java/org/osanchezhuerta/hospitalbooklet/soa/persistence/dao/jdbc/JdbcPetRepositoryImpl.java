@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.osanchezhuerta.soa.persistence.dao.jdbc;
+package org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.jdbc;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,10 +25,10 @@ import org.osanchezhuerta.hospitalbooklet.soa.model.Owner;
 import org.osanchezhuerta.hospitalbooklet.soa.model.Pet;
 import org.osanchezhuerta.hospitalbooklet.soa.model.PetType;
 import org.osanchezhuerta.hospitalbooklet.soa.model.Visit;
+import org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.OwnerRepository;
+import org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.PetRepository;
+import org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.VisitRepository;
 import org.osanchezhuerta.hospitalbooklet.soa.util.EntityUtils;
-import org.osanchezhuerta.soa.persistence.dao.OwnerRepository;
-import org.osanchezhuerta.soa.persistence.dao.PetRepository;
-import org.osanchezhuerta.soa.persistence.dao.VisitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;

@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.osanchezhuerta.soa.persistence.dao.springdatajpa;
+package org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.springdatajpa;
 
 import java.util.List;
 
 import org.osanchezhuerta.hospitalbooklet.soa.model.Pet;
 import org.osanchezhuerta.hospitalbooklet.soa.model.PetType;
-import org.osanchezhuerta.soa.persistence.dao.PetRepository;
+import org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.PetRepository;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;

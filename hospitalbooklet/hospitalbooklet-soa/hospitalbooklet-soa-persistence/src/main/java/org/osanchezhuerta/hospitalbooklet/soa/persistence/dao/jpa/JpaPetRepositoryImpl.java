@@ -13,21 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.osanchezhuerta.soa.persistence.dao.jpa;
+package org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.jpa;
 
-import java.util.Collection;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import org.osanchezhuerta.hospitalbooklet.soa.model.Vet;
-import org.osanchezhuerta.soa.persistence.dao.VetRepository;
-import org.springframework.cache.annotation.Cacheable;
-
+import org.osanchezhuerta.hospitalbooklet.soa.model.Pet;
+import org.osanchezhuerta.hospitalbooklet.soa.model.PetType;
+import org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.PetRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * JPA implementation of the {@link VetRepository} interface.
+ * JPA implementation of the {@link PetRepository} interface.
  *
  * @author Mike Keith
  * @author Rod Johnson
@@ -36,17 +35,25 @@ import org.springframework.stereotype.Repository;
  * @since 22.4.2006
  */
 @Repository
-public class JpaVetRepositoryImpl implements VetRepository {
+public class JpaPetRepositoryImpl implements PetRepository {
 
     @PersistenceContext
     private EntityManager em;
 
+    @Override
+    @SuppressWarnings("unchecked")
+    public List<PetType> findPetTypes() {
+        return this.em.createQuery("SELECT ptype FROM PetType ptype ORDER BY ptype.name").getResultList();
+    }
 
     @Override
-    @Cacheable(value = "vets")
-    @SuppressWarnings("unchecked")
-    public Collection<Vet> findAll() {
-        return this.em.createQuery("SELECT vet FROM Vet vet join fetch vet.specialties ORDER BY vet.lastName, vet.firstName").getResultList();
+    public Pet findById(int id) {
+        return this.em.find(Pet.class, id);
+    }
+
+    @Override
+    public void save(Pet pet) {
+        this.em.merge(pet);
     }
 
 }

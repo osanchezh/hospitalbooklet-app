@@ -13,16 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.osanchezhuerta.soa.persistence.dao;
+package org.osanchezhuerta.hospitalbooklet.soa.persistence.dao;
 
-import java.util.List;
+import java.util.Collection;
 
-import org.osanchezhuerta.hospitalbooklet.soa.model.Visit;
+import org.osanchezhuerta.hospitalbooklet.soa.model.Vet;
 import org.springframework.dao.DataAccessException;
 
-
 /**
- * Repository class for <code>Visit</code> domain objects All method names are compliant with Spring Data naming
+ * Repository class for <code>Vet</code> domain objects All method names are compliant with Spring Data naming
  * conventions so this interface can easily be extended for Spring Data See here: http://static.springsource.org/spring-data/jpa/docs/current/reference/html/jpa.repositories.html#jpa.query-methods.query-creation
  *
  * @author Ken Krebs
@@ -30,16 +29,14 @@ import org.springframework.dao.DataAccessException;
  * @author Sam Brannen
  * @author Michael Isvy
  */
-public interface VisitRepository {
+public interface VetRepository {
 
     /**
-     * Save a <code>Visit</code> to the data store, either inserting or updating it.
+     * Retrieve all <code>Vet</code>s from the data store.
      *
-     * @param visit the <code>Visit</code> to save
-     * @see BaseEntity#isNew
+     * @return a <code>Collection</code> of <code>Vet</code>s
      */
-    void save(Visit visit) throws DataAccessException;
+    Collection<Vet> findAll() throws DataAccessException;
 
-    List<Visit> findByPetId(Integer petId);
 
 }

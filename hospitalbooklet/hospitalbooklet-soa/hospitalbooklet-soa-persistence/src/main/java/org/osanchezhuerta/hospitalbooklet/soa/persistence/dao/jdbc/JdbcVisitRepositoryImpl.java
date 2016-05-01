@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.osanchezhuerta.soa.persistence.dao.jdbc;
+package org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -24,7 +24,7 @@ import javax.sql.DataSource;
 
 import org.joda.time.DateTime;
 import org.osanchezhuerta.hospitalbooklet.soa.model.Visit;
-import org.osanchezhuerta.soa.persistence.dao.VisitRepository;
+import org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.VisitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;

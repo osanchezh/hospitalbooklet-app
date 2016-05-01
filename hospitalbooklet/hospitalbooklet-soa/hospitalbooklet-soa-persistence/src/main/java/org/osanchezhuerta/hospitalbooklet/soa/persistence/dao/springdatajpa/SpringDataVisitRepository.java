@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.osanchezhuerta.soa.persistence.dao.springdatajpa;
+package org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.springdatajpa;
 
 import org.osanchezhuerta.hospitalbooklet.soa.model.Visit;
-import org.osanchezhuerta.soa.persistence.dao.VisitRepository;
+import org.osanchezhuerta.hospitalbooklet.soa.persistence.dao.VisitRepository;
 import org.springframework.data.repository.Repository;
 
 
