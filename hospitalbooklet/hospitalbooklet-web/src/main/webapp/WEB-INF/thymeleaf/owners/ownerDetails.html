@@ -64,13 +64,13 @@
         </tr>
          <tr>
             <td> 
-            	<a th:href="@{|${owner.id}/edit.html|}" href="./createOrUpdateOwnerForm.html" class="btn btn-info">Edit Owner</a></td>
+            	<a th:href="@{|${owner.id}/edit.html|}" href="./createOrUpdateOwnerForm.html" class="btn btn-info">Edit Patient</a></td>
             <td>
-            	<a th:href="@{|${owner.id}/pets/new.html|}" href="../pets/createOrUpdatePetForm.html"  class="btn btn-success">Add New Pet</a></td>
+            	<a th:href="@{|${owner.id}/pets/new.html|}" href="../pets/createOrUpdatePetForm.html"  class="btn btn-success">Add New Room</a></td>
         </tr>
     </table>
 
-    <h2>Pets and Visits</h2>
+    <h2>Rooms and Visits</h2>
 
     
         <table class="table" style="width:600px;" th:each="pet : ${owner.pets}">
@@ -100,7 +100,7 @@
                         <tr>
                             <td> 
 			                    <a th:href="@{|/owners/${owner.id}/pets/${pet.id}/edit|}"
-                                   href="../pets/createOrUpdatePetForm.html">Edit Pet</a>
+                                   href="../pets/createOrUpdatePetForm.html">Edit Room</a>
 			                </td>
                             <td>
 			                    <a th:href="@{|/owners/${owner.id}/pets/${pet.id}/visits/new|}"

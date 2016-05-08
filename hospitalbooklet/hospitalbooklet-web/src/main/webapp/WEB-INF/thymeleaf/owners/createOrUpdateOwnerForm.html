@@ -46,7 +46,7 @@
 
 
     <h2>
-        <span th::if="${owner['new']}" th:remove="tag">New </span> Owner
+        <span th::if="${owner['new']}" th:remove="tag">New </span> Patient
     </h2>
     <form th:object="${owner}" th:method="${owner['new']} ? post : put" action="./ownerDetails.html"
         th:action="@{${#httpServletRequest.servletPath}}" class="form-horizontal" id="add-owner-form">
@@ -91,8 +91,8 @@
         </div>
 
         <div class="form-actions">
-            <button th:if="${owner['new']}" type="submit">Add Owner</button>
-            <button th:unless="${owner['new']}" type="submit">Update Owner</button>
+            <button th:if="${owner['new']}" type="submit">Add Patient</button>
+            <button th:unless="${owner['new']}" type="submit">Update Patient</button>
         </div>
     </form>
 </div>

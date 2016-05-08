@@ -32,7 +32,7 @@
             <div class="navbar-inner">
                 <ul class="nav">
                     <li style="width: 100px;"><a href="../welcome.html" th:href="@{/}"><i class="icon-home"></i>Home</a></li>
-                    <li style="width: 130px;"><a href="../owners/findOwners.html" th:href="@{/owners/find.html}"><i class="icon-search"></i>Find owners</a></li>
+                    <li style="width: 130px;"><a href="../owners/findOwners.html" th:href="@{/owners/find.html}"><i class="icon-search"></i>Find patients</a></li>
                     <li style="width: 140px;"><a href="../vets/vetList.html" th:href="@{/vets.html}"><i class="icon-th-list"></i>Veterinarians</a></li>
                     <li style="width: 90px;"><a href="../exception.html" th:href="@{/oups.html}" title="trigger a RuntimeException to see how it is handled"><i class="icon-warning-sign"></i>Error</a></li>
                     <li style="width: 80px;"><a href="#" title="not available yet. Work in progress!!"><i class=" icon-question-sign"></i>Help</a></li>
@@ -43,7 +43,7 @@
             
     </div>
     
-    <h2>Find Owners</h2>
+    <h2>Find Patients</h2>
 
     <form th:object="${owner}" action="ownersList.html" th:action="@{/owners.html}" method="get" class="form-horizontal"
                id="search-owner-form">
@@ -54,13 +54,13 @@
                 <span class="help-inline" th:errors="*{lastName}">[Errors]</span>
             </div>
             <div class="form-actions">
-                <button type="submit">Find Owner</button>
+                <button type="submit">Find Patient</button>
             </div>
         </fieldset>
     </form>
 
     <br/>
-    <a th:href="@{'/owners/new'}" href="createOrUpdateOwnerForm.html">Add Owner</a>
+    <a th:href="@{'/owners/new'}" href="createOrUpdateOwnerForm.html">Add Patient</a>
 
     <table th:replace="fragments/footer :: footer" class="footer">
         <tr>
