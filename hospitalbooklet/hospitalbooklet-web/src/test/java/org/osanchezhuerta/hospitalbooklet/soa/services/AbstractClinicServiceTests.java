@@ -86,9 +86,9 @@ public abstract class AbstractClinicServiceTests {
 	    Collection<PetType> petTypes = this.clinicService.findPetTypes();
 	
 	    PetType petType1 = EntityUtils.getById(petTypes, PetType.class, 1);
-	    assertEquals("cat", petType1.getName());
+	    assertEquals("emergency room", petType1.getName());
 	    PetType petType4 = EntityUtils.getById(petTypes, PetType.class, 4);
-	    assertEquals("snake", petType4.getName());
+	    assertEquals("recovery room", petType4.getName());
 	}
 
 	@Test
@@ -128,12 +128,12 @@ public abstract class AbstractClinicServiceTests {
 	    Vet v1 = EntityUtils.getById(vets, Vet.class, 2);
 	    assertEquals("Leary", v1.getLastName());
 	    assertEquals(1, v1.getNrOfSpecialties());
-	    assertEquals("radiology", (v1.getSpecialties().get(0)).getName());
+	    assertEquals("General physician/ family practitioner", (v1.getSpecialties().get(0)).getName());
 	    Vet v2 = EntityUtils.getById(vets, Vet.class, 3);
 	    assertEquals("Douglas", v2.getLastName());
 	    assertEquals(2, v2.getNrOfSpecialties());
-	    assertEquals("dentistry", (v2.getSpecialties().get(0)).getName());
-	    assertEquals("surgery", (v2.getSpecialties().get(1)).getName());
+	    assertEquals("An emergency doctor", (v2.getSpecialties().get(0)).getName());
+	    assertEquals("Internal medical doctor", (v2.getSpecialties().get(1)).getName());
 	}
 
 	@Test
