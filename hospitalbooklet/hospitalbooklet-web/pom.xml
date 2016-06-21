@@ -31,7 +31,27 @@
 	</organization>
 
 	<dependencies>
+	
+	         <dependency>
+             <groupId>org.hamcrest</groupId>
+             <artifactId>hamcrest-library</artifactId>
+             <version>${hamcrest.version}</version>
+             <scope>test</scope>
+         </dependency>
+         <dependency>
+             <groupId>org.hamcrest</groupId>
+             <artifactId>hamcrest-core</artifactId>
+             <version>${hamcrest.version}</version>
+             <scope>test</scope>
+		</dependency>
 
+		<!-- Test Artifacts -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.osanchezhuerta.hospitalbooklet</groupId>
 			<artifactId>hospitalbooklet-soa-integration</artifactId>
