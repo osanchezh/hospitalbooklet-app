@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 
 
-@ContextConfiguration(locations = {"classpath:spring/business-config.xml"})
+@ContextConfiguration(locations = {"classpath:spring/hospitalbooklet-soa-services/hospitalbooklet-soa-services-appctx.xml"})
 @RunWith(SpringJUnit4ClassRunner.class)
 @ActiveProfiles("jpa")
 public class ClinicServiceJpaTests extends AbstractClinicServiceTests {
