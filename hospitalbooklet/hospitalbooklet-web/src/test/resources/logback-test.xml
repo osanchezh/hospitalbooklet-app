@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true">
 
-	<property name="LOG_HOME" value="/Users/octaviosanchez/logstore/hospitalbooklet" />
+	<property name="LOG_HOME" value="/home/osanchezhuerta/logstore/hospitalbooklet" />
 	<property name="MODULE_NAME" value="hospitalbooklet-web-test" />
 	<property name="PACKAGE_NAME" value="org.osanchezhuerta.hospitalbooklet" />
 

@@ -15,6 +15,7 @@
  */
 package org.osanchezhuerta.hospitalbooklet.web;
 
+import org.hospitalbooklet.soa.commons.exception.HospitalBookletFrontException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,8 +31,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class CrashController {
 
     @RequestMapping(value = "/oups", method = RequestMethod.GET)
-    public String triggerException() {
-        throw new RuntimeException("Expected: controller used to showcase what " +
+    public String triggerException() throws HospitalBookletFrontException {
+        throw new HospitalBookletFrontException("Expected: controller used to showcase what " +
                 "happens when an exception is thrown");
     }
 

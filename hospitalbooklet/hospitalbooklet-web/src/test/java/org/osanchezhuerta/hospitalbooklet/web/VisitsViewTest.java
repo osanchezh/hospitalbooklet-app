@@ -25,7 +25,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration("VisitsViewTest-config.xml")
+@ContextConfiguration("file:src/test/java/org/osanchezhuerta/hospitalbooklet/web/VisitsViewTest-config.xml")
 @ActiveProfiles("jdbc")
 public class VisitsViewTest {
 

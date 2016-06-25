@@ -30,25 +30,20 @@
 		<name>Code Fixes</name>
 	</organization>
 
-<properties>
-    <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-    <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-</properties>
 
 	<dependencies>
-	
-	         <dependency>
-             <groupId>org.hamcrest</groupId>
-             <artifactId>hamcrest-library</artifactId>
-             <version>${hamcrest.version}</version>
-             <scope>test</scope>
-         </dependency>
-         <dependency>
-             <groupId>org.hamcrest</groupId>
-             <artifactId>hamcrest-core</artifactId>
-             <version>${hamcrest.version}</version>
-             <scope>test</scope>
+
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-library</artifactId>
+			<version>${hamcrest.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>${hamcrest.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<!-- Test Artifacts -->
@@ -186,23 +181,24 @@
 	<build>
 		<defaultGoal>install</defaultGoal>
 		<plugins>
-
-        <plugin>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.7.0.201403182114</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>prepare-agent</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <destFile>${sonar.jacoco.reportPath}</destFile>
-            </configuration>
-        </plugin>
-
+	        <plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.6.201602180812</version>
+				<executions>
+					<execution>
+						<id>agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+						<configuration>
+							<append>true</append>
+							<destFile>${sonar.jacoco.reportPath}</destFile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
